@@ -372,7 +372,6 @@ modules:
       - -Dsdl2=enabled
       - -Dshaderc=disabled
       - -Dvulkan=enabled
-      - -Dvulkan-interop=enabled
     cleanup:
       - /include
       - /lib/pkgconfig
@@ -384,6 +383,36 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
+  - name: libzen
+    subdir: Project/GNU/Library
+    config-opts:
+      - --enable-shared
+      - --disable-static
+    sources:
+      - type: archive
+        url: https://mediaarea.net/download/source/libzen/0.4.41/libzen_0.4.41.tar.xz
+        sha256: 933bad3b7ecd29dc6bdc88a83645c83dfd098c15b0b90d6177a37fa1536704e8
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/*.la
+  - name: libmediainfo
+    subdir: Project/GNU/Library
+    config-opts:
+      - --enable-shared
+      - --disable-static
+    sources:
+      - type: archive
+        url: https://mediaarea.net/download/source/libmediainfo/24.06/libmediainfo_24.06.tar.xz
+        sha256: 0683f28a2475dc2417205ba528debccc407da4d9fa6516eb4b75b3ff7244e96e
+    cleanup:
+      - /bin
+      - /include
+      - /lib/pkgconfig
+      - /lib/*.la
+  - python3-expandvars.yaml
+  - python3-cffi.yaml
   - python3-requirements-client.yaml
   - python3-poetry-core.yaml
   - name: syng
@@ -402,5 +431,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/christofsteel/syng.git
-        commit: 58b3837d1bae05abd9b521dac8bed0de3ae2824c
+        commit: b960b4365b30e1802132b6303a996bb811c01b00
 
