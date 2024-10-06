@@ -73,7 +73,7 @@ modules:
       - type: git
         url: https://github.com/LuaJIT/LuaJIT.git
         disable-shallow-clone: true
-        commit: f5fd22203eadf57ccbaa4a298010d23974b22fc0
+        commit: 97813fb924edf822455f91a5fbbdfdb349e5984f
         x-checker-data:
           type: json
           url: https://api.github.com/repos/LuaJIT/LuaJIT/commits
@@ -431,5 +431,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/christofsteel/syng.git
-        commit: bbbf54c9ed5ccc374c55da397108630ccbc43696
+        commit: 7d608d99f239546eeb2214a4f7d666b526f59f02
 
