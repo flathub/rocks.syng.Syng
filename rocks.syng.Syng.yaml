@@ -431,5 +431,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/christofsteel/syng.git
-        commit: 4a8d54e7ba91706acbef4bef2087ee4a67ed159e 
+        commit: dd12de4a7cd68b85f9f0f78e7ee0261efa59da2a 
 
