@@ -73,7 +73,7 @@ modules:
       - type: git
         url: https://github.com/LuaJIT/LuaJIT.git
         disable-shallow-clone: true
-        commit: 97813fb924edf822455f91a5fbbdfdb349e5984f
+        commit: fe71d0fb54ceadfb5b5f3b6baf29e486d97f6059
         x-checker-data:
           type: json
           url: https://api.github.com/repos/LuaJIT/LuaJIT/commits
@@ -94,8 +94,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2024.09.27/yt-dlp.tar.gz
-        sha256: ffce6ebd742373eff6dac89b23f706ec7513a0367160eb8b5a550cd706cd883f
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2024.11.04/yt-dlp.tar.gz
+        sha256: 0ae3767c48d90d7fd6c5cb5a3d9fcb954441d984abf20c077d5f5bc0789b9aa4
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -224,7 +224,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/jpsdr/x264
-        commit: c24e06c2e184345ceb33eb20a15d1024d9fd3497
+        commit: da14df5535fd46776fb1c9da3130973295c87aca
         # Every commit to the master branch is considered a release
         # https://code.videolan.org/videolan/x264/-/issues/35
         x-checker-data:
@@ -431,5 +431,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/christofsteel/syng.git
-        commit: a134a07bffd5bdfa82aa0538609fcff84aeeddce
+        commit: dd12de4a7cd68b85f9f0f78e7ee0261efa59da2a 
 
