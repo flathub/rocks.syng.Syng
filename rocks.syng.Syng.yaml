@@ -73,7 +73,7 @@ modules:
       - type: git
         url: https://github.com/LuaJIT/LuaJIT.git
         disable-shallow-clone: true
-        commit: fe71d0fb54ceadfb5b5f3b6baf29e486d97f6059
+        commit: 19878ec05c239ccaf5f3d17af27670a963e25b8b
         x-checker-data:
           type: json
           url: https://api.github.com/repos/LuaJIT/LuaJIT/commits
@@ -95,7 +95,7 @@ modules:
     sources:
       - type: archive
         url: https://github.com/yt-dlp/yt-dlp/releases/download/2024.11.18/yt-dlp.tar.gz
-        sha256: d60cd68ddb12bfe3f443f83d5fe401088993e21c5362daeb4fb16ee39fc4b4dc 
+        sha256: d60cd68ddb12bfe3f443f83d5fe401088993e21c5362daeb4fb16ee39fc4b4dc
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -247,8 +247,8 @@ modules:
     sources:
       - type: git
         url: https://bitbucket.org/multicoreware/x265_git.git
-        tag: '4.0'
-        commit: 6318f223684118a2c71f67f3f4633a9e35046b00
+        tag: '4.1'
+        commit: 1d117bed4747758b51bd2c124d738527e30392cb
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
