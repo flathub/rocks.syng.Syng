@@ -74,12 +74,12 @@ modules:
         url: https://github.com/LuaJIT/LuaJIT.git
         disable-shallow-clone: true
         commit: fe71d0fb54ceadfb5b5f3b6baf29e486d97f6059
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/LuaJIT/LuaJIT/commits
-          commit-query: first( .[].sha )
-          version-query: first( .[].sha )
-          timestamp-query: first( .[].commit.committer.date )
+        # x-checker-data:
+        #   type: json
+        #   url: https://api.github.com/repos/LuaJIT/LuaJIT/commits
+        #   commit-query: first( .[].sha )
+        #   version-query: first( .[].sha )
+        #   timestamp-query: first( .[].commit.committer.date )
       - type: shell
         commands:
           - sed -i 's|/usr/local|/app|' ./Makefile
@@ -227,13 +227,13 @@ modules:
         commit: da14df5535fd46776fb1c9da3130973295c87aca
         # Every commit to the master branch is considered a release
         # https://code.videolan.org/videolan/x264/-/issues/35
-        x-checker-data:
-          type: json
-          url: https://code.videolan.org/api/v4/projects/536/repository/commits
-          commit-query: first( .[].id )
-          version-query: first( .[].id )
-          timestamp-query: first( .[].committed_date )
-
+        # x-checker-data:
+        #   type: json
+        #   url: https://code.videolan.org/api/v4/projects/536/repository/commits
+        #   commit-query: first( .[].id )
+        #   version-query: first( .[].id )
+        #   timestamp-query: first( .[].committed_date )
+        #
   - name: x265
     buildsystem: cmake
     subdir: source
