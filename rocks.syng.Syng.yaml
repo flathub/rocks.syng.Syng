@@ -227,8 +227,8 @@ modules:
     sources:
       - type: git
         url: https://bitbucket.org/multicoreware/x265_git.git
-        tag: '4.0'
-        commit: 6318f223684118a2c71f67f3f4633a9e35046b00
+        tag: '4.1'
+        commit: 1d117bed4747758b51bd2c124d738527e30392cb
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -335,8 +335,8 @@ modules:
             #  tag-pattern: ^sdk-([\d.]+)$
           - type: git
             url: https://github.com/KhronosGroup/glslang.git
-            tag: 15.0.0
-            commit: 46ef757e048e760b46601e6e77ae0cb72c97bd2f
+            tag: 15.1.0
+            commit: 1062752a891c95b2bfeed9e356562d88f9df84ac
             dest: third_party/glslang
             x-checker-data:
               type: git
