@@ -94,8 +94,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.01.15/yt-dlp.tar.gz
-        sha256: e410c5fbbc84af848a02ac985bcfae6089586c62ffa95d1ed87dadd96babac8d
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.01.26/yt-dlp.tar.gz
+        sha256: f9b62c5f8c3db910d693a7ac1477f44696a923ff9b0a3f9d87fefea4e10e9e04
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -227,8 +227,8 @@ modules:
     sources:
       - type: git
         url: https://bitbucket.org/multicoreware/x265_git.git
-        tag: '4.0'
-        commit: 6318f223684118a2c71f67f3f4633a9e35046b00
+        tag: '4.1'
+        commit: 1d117bed4747758b51bd2c124d738527e30392cb
         x-checker-data:
           type: git
           tag-pattern: ^([\d.]+)$
@@ -335,8 +335,8 @@ modules:
             #  tag-pattern: ^sdk-([\d.]+)$
           - type: git
             url: https://github.com/KhronosGroup/glslang.git
-            tag: 15.0.0
-            commit: 46ef757e048e760b46601e6e77ae0cb72c97bd2f
+            tag: 15.1.0
+            commit: 1062752a891c95b2bfeed9e356562d88f9df84ac
             dest: third_party/glslang
             x-checker-data:
               type: git
