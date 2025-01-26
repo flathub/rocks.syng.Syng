@@ -94,8 +94,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.01.15/yt-dlp.tar.gz
-        sha256: e410c5fbbc84af848a02ac985bcfae6089586c62ffa95d1ed87dadd96babac8d
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.01.26/yt-dlp.tar.gz
+        sha256: f9b62c5f8c3db910d693a7ac1477f44696a923ff9b0a3f9d87fefea4e10e9e04
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -229,16 +229,16 @@ modules:
         url: https://bitbucket.org/multicoreware/x265_git.git
         tag: '4.0'
         commit: 6318f223684118a2c71f67f3f4633a9e35046b00
-        x-checker-data:
-          type: git
-          tag-pattern: ^([\d.]+)$
+        #        x-checker-data:
+        #          type: git
+        #          tag-pattern: ^([\d.]+)$
 
   - name: vulkan-headers
     buildsystem: cmake-ninja
     sources:
       - type: archive
-        url: https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.3.286.tar.gz
-        sha256: a82a6982efe5e603e23505ca19b469e8f3d876fc677c46b7bfb6177f517bf8fe
+        url: https://github.com/KhronosGroup/Vulkan-Headers/archive/v1.4.306.tar.gz 
+        sha256: 18f4b4de873d071ddd7b73ea48e2ec4e7c6133e2ebb6b4236ca2345acd056994
 
   - name: ffmpeg
     cleanup:
@@ -294,54 +294,55 @@ modules:
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
-    modules:
-      - name: shaderc
-        buildsystem: cmake-ninja
-        builddir: true
-        config-opts:
-          - -DSHADERC_SKIP_COPYRIGHT_CHECK=ON
-          - -DSHADERC_SKIP_EXAMPLES=ON
-          - -DSHADERC_SKIP_TESTS=ON
-          - -DSPIRV_SKIP_EXECUTABLES=ON
-          - -DENABLE_GLSLANG_BINARIES=OFF
-        cleanup:
-          - /bin
-          - /include
-          - /lib/cmake
-          - /lib/pkgconfig
-        sources:
-          - type: git
-            url: https://github.com/google/shaderc.git
-            #tag: v2023.7
-            commit: 40bced4e1e205ecf44630d2dfa357655b6dabd04
-            #x-checker-data:
-            #  type: git
-            #  tag-pattern: ^v(\d{4}\.\d{1,2})$
-          - type: git
-            url: https://github.com/KhronosGroup/SPIRV-Tools.git
-            tag: v2024.1
-            commit: 04896c462d9f3f504c99a4698605b6524af813c1
-            dest: third_party/spirv-tools
-            #x-checker-data:
-            #  type: git
-            #  tag-pattern: ^v(\d{4}\.\d{1})$
-          - type: git
-            url: https://github.com/KhronosGroup/SPIRV-Headers.git
-            #tag: sdk-1.3.250.1
-            commit: 4f7b471f1a66b6d06462cd4ba57628cc0cd087d7
-            dest: third_party/spirv-headers
-            #x-checker-data:
-            #  type: git
-            #  tag-pattern: ^sdk-([\d.]+)$
-          - type: git
-            url: https://github.com/KhronosGroup/glslang.git
-            tag: 15.0.0
-            commit: 46ef757e048e760b46601e6e77ae0cb72c97bd2f
-            dest: third_party/glslang
-            x-checker-data:
-              type: git
-              tag-pattern: ^(\d{1,2}\.\d{1,2}\.\d{1,4})$
-
+    # modules:
+    #   - name: shaderc
+    #     buildsystem: cmake-ninja
+    #     builddir: true
+    #     config-opts:
+    #       - -DSHADERC_SKIP_COPYRIGHT_CHECK=ON
+    #       - -DSHADERC_SKIP_EXAMPLES=ON
+    #       - -DSHADERC_SKIP_TESTS=ON
+    #       - -DSPIRV_SKIP_EXECUTABLES=ON
+    #       - -DENABLE_GLSLANG_BINARIES=OFF
+    #     cleanup:
+    #       - /bin
+    #       - /include
+    #       - /lib/cmake
+    #       - /lib/pkgconfig
+    #     sources:
+    #       - type: git
+    #         url: https://github.com/google/shaderc.git
+    #         tag: v2024.4
+    #         commit: caa54d9779d5605aca4e1a0c0c962a3d8f4aeb31
+    #         # commit: 40bced4e1e205ecf44630d2dfa357655b6dabd04
+    #         #x-checker-data:
+    #         #  type: git
+    #         #  tag-pattern: ^v(\d{4}\.\d{1,2})$
+    #       - type: git
+    #         url: https://github.com/KhronosGroup/SPIRV-Tools.git
+    #         tag: v2024.2
+    #         commit: dd4b663e13c07fea4fbb3f70c1c91c86731099f7
+    #         dest: third_party/spirv-tools
+    #         #x-checker-data:
+    #         #  type: git
+    #         #  tag-pattern: ^v(\d{4}\.\d{1})$
+    #       - type: git
+    #         url: https://github.com/KhronosGroup/SPIRV-Headers.git
+    #         tag: vulkan-sdk-1.4.304.0
+    #         commit: 3f17b2af6784bfa2c5aa5dbb8e0e74a607dd8b3b 
+    #         dest: third_party/spirv-headers
+    #         #x-checker-data:
+    #         #  type: git
+    #         #  tag-pattern: ^culkan-sdk-([\d.]+)$
+    #       - type: git
+    #         url: https://github.com/KhronosGroup/glslang.git
+    #         tag: 15.1.0
+    #         commit: 1062752a891c95b2bfeed9e356562d88f9df84ac
+    #         dest: third_party/glslang
+    #         x-checker-data:
+    #           type: git
+    #           tag-pattern: ^(\d{1,2}\.\d{1,2}\.\d{1,4})$
+    #
   - name: mpv
     buildsystem: meson
     config-opts:
