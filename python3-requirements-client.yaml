@@ -436,7 +436,7 @@ modules:
     buildsystem: simple
     build-commands:
       - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-        --prefix=${FLATPAK_DEST} "yt-dlp[default]==2025.1.26" --no-build-isolation
+        --prefix=${FLATPAK_DEST} "yt-dlp[default]==2025.3.25" --no-build-isolation
     sources:
       - *id023
       - *id010
