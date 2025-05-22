@@ -94,8 +94,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.04.30/yt-dlp.tar.gz
-        sha256: feb3113fc38c1c0f987d2cfcb7366fed65fa508ff302e7bd8ac9be87c7774b31
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.05.22/yt-dlp.tar.gz
+        sha256: 1e5d675af0cb7ac5c00135e6d9cbb5a2fb6726126ae9ad62740548dddd36afcd
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -289,8 +289,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/haasn/libplacebo.git
-        tag: v7.349.0
-        commit: 1fd3c7bde7b943fe8985c893310b5269a09b46c5
+        tag: v7.351.0
+        commit: 3188549fba13bbdf3a5a98de2a38c2e71f04e21e
         x-checker-data:
           type: git
           tag-pattern: ^v([\d.]+)$
