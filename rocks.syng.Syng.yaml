@@ -88,8 +88,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.06.30/yt-dlp.tar.gz
-        sha256: 606f3e3e431839998d1f377de615a9792e77e5968ad929c2c6ba1a17774bbf1b
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.08.11/yt-dlp.tar.gz
+        sha256: 4dff6a6cbe1c2fd9d01d5dfa8cff0944fa7ccb532a045bd215ce820b0b0688d9
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -141,8 +141,8 @@ modules:
     sources:
       - type: archive
         archive-type: tar
-        url: https://api.github.com/repos/sekrit-twc/zimg/tarball/release-3.0.5
-        sha256: 1b8998f03f4a49e4d730033143722b32bc28a5306ef809ccfb3b4bbb29e4b784
+        url: https://api.github.com/repos/sekrit-twc/zimg/tarball/release-3.0.6
+        sha256: 15140e491c4ce9db5f02a038d8a1eb53e9151b55eeed06a2899425a6ebfef367
         x-checker-data:
           type: json
           url: https://api.github.com/repos/sekrit-twc/zimg/releases/latest
