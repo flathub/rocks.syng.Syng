@@ -56,8 +56,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/xorg/lib/libxpresent.git
-        tag: libXpresent-1.0.1
-        commit: 37507b5f44332accfb1064ee69a4f6a833994747
+        tag: libXpresent-1.0.2
+        commit: 4d92149372461bf575e8a09b1064a2884c38c3aa
         x-checker-data:
           type: git
           tag-pattern: ^libXpresent-([\d.]+)$
@@ -88,8 +88,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.09.26/yt-dlp.tar.gz
-        sha256: 1a2221451f0b4815b4bd6dfa665238f44b34cb1dac01c1cfda5dff36459e1164
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2025.10.22/yt-dlp.tar.gz
+        sha256: 8ed2971172cbe1295258341e9f04527a7f27578538ce70ef4c9ebaba8966a969
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
@@ -232,8 +232,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/FFmpeg/FFmpeg.git
-        commit: db69d06eeeab4f46da15030a80d539efb4503ca8
-        tag: n7.1.1
+        commit: 140fd653aed8cad774f991ba083e2d01e86420c7
+        tag: n8.0
         x-checker-data:
           type: git
           tag-pattern: ^n([\d.]{3,7})$
