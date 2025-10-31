@@ -483,7 +483,7 @@ modules:
   buildsystem: simple
   build-commands:
   - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
-    --prefix=${FLATPAK_DEST} "yt-dlp[default]==2025.9.26" --no-build-isolation
+    --prefix=${FLATPAK_DEST} "yt-dlp[default]==2025.10.22" --no-build-isolation
   sources:
   - *id024
   - *id010
