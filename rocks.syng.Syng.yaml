@@ -245,7 +245,7 @@ modules:
       - -Dlibmpv=true
       - -Dmanpage-build=disabled
       - -Dlibarchive=enabled
-      - -Dsdl2=enabled
+      # - -Dsdl2=enabled
       - -Dshaderc=disabled
       - -Dvulkan=enabled
     cleanup:
