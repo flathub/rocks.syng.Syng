@@ -81,8 +81,8 @@ modules:
       - pip3 install --prefix=/app yt_dlp_ejs*.whl
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/a4/90/8911146822364666be47f184c4180cec20fcc537a268ef40d1ab077dd25b/yt_dlp_ejs-0.4.0-py3-none-any.whl
-        sha256: 19278cff397b243074df46342bb7616c404296aeaff01986b62b4e21823b0b9c
+        url: https://files.pythonhosted.org/packages/e3/bd/520769863744b669440a924271a6159ddd82ad5ae26b4ac4d4b69e9f8d44/yt_dlp_ejs-0.8.0-py3-none-any.whl
+        sha256: 79300e5fca7f937a1eeede11f0456862c1b41107ce1d726871e0207424f4bdb4
         x-checker-data:
           type: pypi
           name: yt-dlp-ejs
@@ -98,8 +98,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.01.29/yt-dlp.tar.gz
-        sha256: e4edd01abd229f646b8280209d462785c2d0929f7612fb24740fa528e5eff433
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.06.09/yt-dlp.tar.gz
+        sha256: 7603f876b78d08b5fdd5bcd1d368590fde22c3c18e4ea00766d51120d21cc679
         x-checker-data:
           type: json
           url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
