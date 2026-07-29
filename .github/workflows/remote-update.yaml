@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: clean old files
-        run: rm *.yaml && patches/* && rmdir patches
+        run: rm *.yaml
       - name: get upstream files
         run: |
           wget ${{ github.event.client_payload.url }} -O files.zip
