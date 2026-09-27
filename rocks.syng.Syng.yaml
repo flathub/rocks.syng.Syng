@@ -1,14 +1,15 @@
 id: rocks.syng.Syng
 runtime: org.kde.Platform
-runtime-version: '6.10'
+runtime-version: '6.11'
 sdk: org.kde.Sdk
-base: com.riverbankcomputing.PyQt.BaseApp
-base-version: '6.10'
+base: io.qt.PySide.BaseApp
+base-version: '6.11'
 cleanup-commands:
   - /app/cleanup-BaseApp.sh
 build-options:
   env:
     - BASEAPP_REMOVE_WEBENGINE=1
+    - BASEAPP_DISABLE_NUMPY=1
 finish-args:
   - --env=QTWEBENGINEPROCESS_PATH=/app/bin/QtWebEngineProcess
   # X11 + XShm access
@@ -81,12 +82,8 @@ modules:
       - pip3 install --prefix=/app yt_dlp_ejs*.whl
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/a4/90/8911146822364666be47f184c4180cec20fcc537a268ef40d1ab077dd25b/yt_dlp_ejs-0.4.0-py3-none-any.whl
-        sha256: 19278cff397b243074df46342bb7616c404296aeaff01986b62b4e21823b0b9c
-        x-checker-data:
-          type: pypi
-          name: yt-dlp-ejs
-          packagetype: bdist_wheel
+        url: https://github.com/yt-dlp/ejs/releases/download/0.8.0/yt_dlp_ejs-0.8.0-py3-none-any.whl
+        sha256: 79300e5fca7f937a1eeede11f0456862c1b41107ce1d726871e0207424f4bdb4
 
   - name: yt-dlp
     no-autogen: true
@@ -98,13 +95,8 @@ modules:
       - install yt-dlp /app/bin
     sources:
       - type: archive
-        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.01.29/yt-dlp.tar.gz
-        sha256: e4edd01abd229f646b8280209d462785c2d0929f7612fb24740fa528e5eff433
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
-          version-query: .tag_name
-          url-query: .assets[] | select(.name=="yt-dlp.tar.gz") | .browser_download_url
+        url: https://github.com/yt-dlp/yt-dlp/releases/download/2026.08.19/yt-dlp.tar.gz
+        sha256: 072aad4f2a7604e92155f61a275a4752dc64046c8f6d90df3710525d94cd37c1
 
   - name: libass
     cleanup:
@@ -115,8 +107,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/libass/libass.git
-        tag: 0.17.4
-        commit: bbb3c7f1570a4a021e52683f3fbdf74fe492ae84
+        tag: 0.17.5
+        commit: 4a05d8127f525943ebf45fdc6497c9e665947f0d
         x-checker-data:
           type: git
           tag-pattern: ^(\d\.\d{1,3}\.\d{1,2})$
@@ -218,16 +210,16 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/denoland/deno/releases/download/v2.5.6/deno-x86_64-unknown-linux-gnu.zip
-        sha256: fd4f6abc1b6a134fa9a4dba56519f1631f44c88e04e4e3e9a8ff5975dfa66e1a
+        url: https://github.com/denoland/deno/releases/download/v2.9.7/deno-x86_64-unknown-linux-gnu.zip
+        sha256: c6527f24f4b16031d3ae4fa9f658d5f11534c8d84ce7dc8502420280919c3490
         dest-filename: deno.zip
 
       # -------- aarch64 build --------
       - type: file
         only-arches:
           - aarch64
-        url: https://github.com/denoland/deno/releases/download/v2.5.6/deno-aarch64-unknown-linux-gnu.zip
-        sha256: f5e60ae3dfceb61e5e5a41f22129e40a8bc17f6393b59e75d7ca19ceef32d824
+        url: https://github.com/denoland/deno/releases/download/v2.9.7/deno-aarch64-unknown-linux-gnu.zip
+        sha256: c832298b1ad4422481334855f6003e0f54145762c5a134f20a489511d2f65bbf
         dest-filename: deno.zip
 
       # -------- unpack the zip --------
@@ -235,12 +227,8 @@ modules:
         commands:
           - unzip deno.zip
 
-  - python3-uv-build.yaml
-  - python3-expandvars.yaml
-  - python3-cffi.yaml
-  - python3-pdm-backend.yaml
-  - python3-pybind11.yaml
-  - python3-requirements-client.yaml
+  - python3-modules.yaml
+
   - name: syng
     buildsystem: simple
     build-commands:
@@ -256,5 +244,5 @@ modules:
       # - install -Dm644 resources/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg 
     sources:
       - type: git
-        url: https://github.com/christofsteel/syng.git
-        commit: 2d0752bd00dcf0aa6356b0879fd05ab33ab19c10
+        url: https://git.k-fortytwo.de/christofsteel/syng.git
+        commit: 2652a818ce618a6846ecc203c1f0195ff741b0b8
