@@ -245,4 +245,4 @@ modules:
     sources:
       - type: git
         url: https://git.k-fortytwo.de/christofsteel/syng.git
-        commit: 901b135781da7e99f03b07b834249ea783f346bc
+        commit: a3c45a8c4c43ca0f3491104d0087c982e6cf1954
